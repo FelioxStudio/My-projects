@@ -1,0 +1,33 @@
+import random
+
+print("Witaj w grze: Papier, Kamień, Nożyce")
+print("Aby zacząć grać wpisz jedną z opcji. Pamiętaj o wielkich literach na początku słowa.")
+
+odp = input()
+
+if odp not in ["Papier", "Kamień", "Nożyce"]:
+    print("Źle wpisałeś. Uruchom program ponownie.")
+else:
+    if odp == "Papier":
+        wybor = random.choice(["Kamień", "Nożyce"])
+        print(wybor)
+        if wybor == "Kamień":
+            print("Wygrałeś")
+        elif wybor == "Nożyce":
+            print("Przegrałeś")
+
+    if odp == "Kamień":
+        wybor = random.choice(["Papier", "Nożyce"])
+        print(wybor)
+        if wybor == "Nożyce":
+            print("Wygrałeś")
+        elif wybor == "Papier":
+            print("Przegrałeś")
+
+    if odp == "Nożyce":
+        wybor = random.choice(["Papier", "Kamień"])
+        print(wybor)
+        if wybor == "Papier":
+            print("Wygrałeś")
+        elif wybor == "Kamień":
+            print("Przegrałeś")
